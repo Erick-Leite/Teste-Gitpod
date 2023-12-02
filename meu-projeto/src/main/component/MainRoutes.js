@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import NewProjects from "../pages/NewProject";
 import Company from "../pages/Company";
 import Contacts from "../pages/Contacts";
-import styles from "../main_layout/main_container.module.css";
+import styles from "./MainRoutes.module.css"
 
 function MainRoutes() {
   return (
