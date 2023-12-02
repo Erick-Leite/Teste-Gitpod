@@ -10,7 +10,7 @@ function App() {
         <Nav />
       </header>
       <main>
-        <MainRoutes customClass="min_height" />
+        <MainRoutes />
       </main>
       <footer>
         <p>Rodapé</p>

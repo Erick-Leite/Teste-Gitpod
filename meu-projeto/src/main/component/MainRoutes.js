@@ -3,18 +3,18 @@ import Home from "../pages/Home";
 import NewProjects from "../pages/NewProject";
 import Company from "../pages/Company";
 import Contacts from "../pages/Contacts";
-import styles from "../main_layout/main_routes.module.css";
+import Container from "../../general_layout/General_layout_container";
 
-function MainRoutes({customClass}) {
+function MainRoutes() {
   return (
-    <div className={`${styles.container} ${styles[customClass]}`}>
+    <Container customClass="min_height">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new_project" element={<NewProjects />} />
         <Route path="/company" element={<Company />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
-    </div>
+    </Container>
   );
 }
 
