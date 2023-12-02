@@ -3,16 +3,18 @@ import Home from "../pages/Home";
 import NewProjects from "../pages/NewProject";
 import Company from "../pages/Company";
 import Contacts from "../pages/Contacts";
-import styles from "./MainRoutes.module.css"
+import styles from "../main_layout/main_routes.module.css";
 
-function MainRoutes() {
+function MainRoutes({customClass}) {
   return (
-    <Routes className={styles.container}>
-      <Route path="/" element={<Home />} />
-      <Route path="/new_project" element={<NewProjects />} />
-      <Route path="/company" element={<Company />} />
-      <Route path="/contacts" element={<Contacts />} />
-    </Routes>
+    <div className={`${styles.container} ${styles[customClass]}`}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/new_project" element={<NewProjects />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+    </div>
   );
 }
 
