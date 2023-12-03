@@ -1,4 +1,3 @@
-import "./App.css";
 import Nav from "./header/components_h/Nav";
 import MainRoutes from "./main/component/MainRoutes";
 import { BrowserRouter as Router } from "react-router-dom";
