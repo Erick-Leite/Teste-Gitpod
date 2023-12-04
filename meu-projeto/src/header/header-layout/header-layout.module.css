@@ -1,0 +1,26 @@
+.nav_bar {
+  display: flex;
+  background-color: #222;
+  padding: 1.6rem;
+}
+
+.list_links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.list_links li {
+  margin-right: 1.6rem;
+}
+
+.list_links li a {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list_links li a:hover {
+  color: #ffbb33;
+}

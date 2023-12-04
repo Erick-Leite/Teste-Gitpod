@@ -1,19 +1,14 @@
-import Nav from "./header/components_h/Nav";
-import MainRoutes from "./main/component/MainRoutes";
+import HeaderNavbar from "./header/components_h/Header";
+import MainRoutes from "./main/conponents-m/Main";
+import Footer from "./footer/components-f/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <header>
-        <Nav />
-      </header>
-      <main>
-        <MainRoutes />
-      </main>
-      <footer>
-        <p>Rodapé</p>
-      </footer>
+      <HeaderNavbar />
+      <MainRoutes />
+      <Footer />
     </Router>
   );
 }

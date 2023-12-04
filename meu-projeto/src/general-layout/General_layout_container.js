@@ -1,4 +1,4 @@
-import styles from "../general_layout/general_layout.module.css";
+import styles from "./general_layout.module.css";
 
 function General_layout_container({ customClass, children }) {
   return (
