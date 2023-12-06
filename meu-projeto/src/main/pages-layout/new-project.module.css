@@ -1,0 +1,13 @@
+.new_project_container {
+    max-width: 45rem;
+    padding: 4.8rem;
+}
+
+.new_project_container h1 {
+    font-size: 3.2rem;
+    margin-bottom: .8rem;
+}
+
+.new_project_container p {
+    font-size: 1.6rem;
+}

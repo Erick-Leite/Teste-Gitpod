@@ -1,6 +1,6 @@
 import { FaFacebook, FaWhatsapp, FaTwitter } from "react-icons/fa";
 
-import styles from "../footer-layout/footer-layout.module.css";
+import styles from "../footer/footer.module.css";
 
 function Footer() {
   return (

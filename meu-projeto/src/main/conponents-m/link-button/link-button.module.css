@@ -1,0 +1,12 @@
+.link_button {
+  font-size: 1.6rem;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  transition: 0.5s;
+}
+
+.link_button:hover {
+  color: #fb3;
+}
