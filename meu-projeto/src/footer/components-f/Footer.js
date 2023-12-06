@@ -1,5 +1,5 @@
 import { FaFacebook, FaWhatsapp, FaTwitter } from "react-icons/fa";
-import Container from "../../general-layout/General_layout_container";
+
 import styles from "../footer-layout/footer-layout.module.css";
 
 function Footer() {

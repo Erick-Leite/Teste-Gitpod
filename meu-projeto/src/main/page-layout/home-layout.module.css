@@ -1,0 +1,43 @@
+.home_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6.4rem;
+}
+
+.home_container h1 {
+  font-size: 4.0rem;
+  margin-bottom: .8rem;
+}
+
+.home_container h1 span {
+  color: #fb3;
+  background-color: #222;
+  padding: 0 .32rem;
+}
+
+.home_container p {
+  color: #7b7b7b;
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.link_button {
+  font-size: 1.6rem;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  padding: .8rem 1.6rem;
+  transition: .5s;
+}
+
+.link_button:hover {
+  color: #fb3;
+}
+
+.home_container img {
+  width: 35rem;
+  margin-top: 2.4rem;
+}
