@@ -1,0 +1,19 @@
+.input_container {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+
+.input_container label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.96rem;
+}
+
+.input_container input {
+  font-size: 1.6rem;
+  background-color: white;
+  border: none;
+  padding: 1.12rem;
+  margin-bottom: 1.6rem;
+}

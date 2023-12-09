@@ -1,8 +1,8 @@
-import styles from "../pages-layout/home.module.css";
+import styles from "./home.module.css";
 
-import savings from "../../img/savings.svg";
+import savings from "../../../img/savings.svg";
 
-import LinkButton from "../conponents-m/link-button/LinkButton";
+import LinkButton from "../../conponents-m/link-button/LinkButton";
 
 function Home() {
   return (
