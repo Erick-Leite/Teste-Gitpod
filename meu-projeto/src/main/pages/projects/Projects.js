@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 
+import Link from "../../conponents-m/link-button/LinkButton";
+
 import styles from "./projects.module.css";
 
 import Message from "../../conponents-m/message/Message";
@@ -10,9 +12,15 @@ function Projects() {
   let message = Location.state?.message;
 
   return (
-    <div className={styles.project_container}>
-      <h1>Projetos criados</h1>
+    <div className={styles.projects}>
+      <div className={styles.projects_header}>
+        <p>Meus projetos</p>
+        <Link to="/new-project" text="Criar Projeto" />
+      </div>
       {message && <Message type="success" msg={message} />}
+      <div className={styles.projects_container}>
+        <p>Projetos...</p>
+      </div>
     </div>
   );
 }

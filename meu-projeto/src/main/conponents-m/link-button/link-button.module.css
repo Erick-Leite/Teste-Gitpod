@@ -3,6 +3,7 @@
   background-color: #222;
   color: white;
   text-decoration: none;
+  border-radius: 0.5rem;
   padding: 0.8rem 1.6rem;
   transition: 0.5s;
 }
