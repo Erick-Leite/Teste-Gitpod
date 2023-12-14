@@ -12,7 +12,7 @@ function ProjectForm({ handleSubmit, submitBtnText, projectData }) {
 
   useEffect(() => {
     fetch(
-      "https://5000-erickleite-testegitpod-vhypm7co665.ws-us106.gitpod.io/categories",
+      "https://5000-erickleite-testegitpod-dgusp95n720.ws-us106.gitpod.io/categories",
       {
         method: "GET",
         headers: {
