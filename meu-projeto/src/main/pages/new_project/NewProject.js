@@ -11,7 +11,7 @@ function NewProjects() {
     (project.cost = 0),
     (project.services = []),
     fetch(
-      "https://5000-erickleite-testegitpod-dgusp95n720.ws-us106.gitpod.io/projects",
+      "https://5000-erickleite-testegitpod-dgusp95n720.ws-us107.gitpod.io/projects",
       {
         method: "POST",
         headers: {

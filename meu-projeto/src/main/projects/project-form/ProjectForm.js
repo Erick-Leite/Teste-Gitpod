@@ -12,7 +12,7 @@ function ProjectForm({ handleSubmit, submitBtnText, projectData }) {
 
   useEffect(() => {
     fetch(
-      "https://5000-erickleite-testegitpod-dgusp95n720.ws-us106.gitpod.io/categories",
+      "https://5000-erickleite-testegitpod-dgusp95n720.ws-us107.gitpod.io/categories",
       {
         method: "GET",
         headers: {
@@ -42,7 +42,6 @@ function ProjectForm({ handleSubmit, submitBtnText, projectData }) {
         name: e.target.options[e.target.selectedIndex].text,
       },
     });
-    console.log(project);
   };
 
   return (
