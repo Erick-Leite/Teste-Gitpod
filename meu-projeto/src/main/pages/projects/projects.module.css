@@ -13,6 +13,9 @@
    font-size: 1.6rem;
 }
 
-.projects_container p {
-   font-size: 1.6rem;
+.projects_container{
+   margin-top: 3rem;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.6rem;
 }

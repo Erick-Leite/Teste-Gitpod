@@ -5,13 +5,13 @@
 }
 
 .project_card h4 {
-    margin: 0 -1.0rem;
-    font-size: 2.08rem;
-    text-align: center;
-    background-color: #222;
-    color: #ffbb33;
-    padding: 0.5rem;
-    margin-bottom: 2.08rem;
+  margin: 0 -1rem;
+  font-size: 2.08rem;
+  text-align: center;
+  background-color: #222;
+  color: #ffbb33;
+  padding: 0.5rem;
+  margin-bottom: 2.08rem;
 }
 
 .project_card p {
@@ -24,7 +24,7 @@
   color: #7a7a7a;
 }
 
-.category span{
+.category span {
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
@@ -42,19 +42,18 @@
 }
 
 .project_card_action a,
-.project_card_action button{
+.project_card_action button {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
   padding: 0.8rem 1.4rem;
   border: 0.1rem solid black;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .project_card_action a:hover,
-.project_card_action button:hover{
+.project_card_action button:hover {
   color: #ffbb33;
   background-color: #222;
 }
-

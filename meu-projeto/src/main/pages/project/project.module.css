@@ -1,0 +1,23 @@
+.project_details {
+    width: 100%;
+    height: 100%;
+}
+
+.project_headers{
+    display: flex;
+    justify-content: space-between;
+    padding: 3.2rem;
+}
+
+.project_details h1 {
+    font-size: 3.2rem;
+}
+
+.project_details span {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.project_details button {
+  font-size: 1.6rem;
+}
