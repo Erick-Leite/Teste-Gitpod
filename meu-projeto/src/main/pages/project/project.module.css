@@ -48,3 +48,13 @@
 .service_form_container p {
   font-size: 1.6rem;
 }
+
+.space_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service_form_container h2,
+.service_container h2 {
+  font-size: 1.872rem;
+}
