@@ -12,7 +12,7 @@ function ServiceForm({ handleSubmit, submitBtnText, projectData }) {
     e.preventDefault();
     projectData.services.push(service);
     handleSubmit(projectData);
-  }
+  };
 
   const handleChange = (e) => {
     setService({ ...service, [e.target.name]: e.target.value });
