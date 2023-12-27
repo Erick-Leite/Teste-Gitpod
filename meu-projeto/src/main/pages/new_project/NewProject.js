@@ -9,24 +9,24 @@ function NewProjects() {
 
   const createPost = (project) => {
     (project.cost = 0),
-    (project.services = []),
-    fetch(
-      "https://5000-erickleite-testegitpod-dgusp95n720.ws-us107.gitpod.io/projects",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(project),
-      }
-    )
-      .then((resp) => resp.json())
-      .then(() =>
-        Navigate("/projects", {
-          state: { message: "Projeto criador com sucesso!" },
-        })
+      (project.services = []),
+      fetch(
+        "https://5000-erickleite-testegitpod-wno80m3ji91.ws-us107.gitpod.io/projects",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(project),
+        }
       )
-      .catch((error) => console.log(error));
+        .then((resp) => resp.json())
+        .then(() =>
+          Navigate("/projects", {
+            state: { message: "Projeto criador com sucesso!" },
+          })
+        )
+        .catch((error) => console.log(error));
   };
 
   return (

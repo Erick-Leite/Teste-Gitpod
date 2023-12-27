@@ -10,18 +10,20 @@ import Loading from "../../conponents-m/loading/Loading";
 import ProjectForm from "../../projects/project-form/ProjectForm";
 import Message from "../../conponents-m/message/Message";
 import ServiceForm from "../../services/ServiceForm";
+import ServiceCard from "../../services/ServiceCard";
 
 function Project() {
   const { id } = useParams();
   const [project, setProject] = useState([]);
+  const [services, setServices] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showServiceForm, setShowServiceForm] = useState(false);
-  const [message, setMessage] = useState();
-  const [type, setType] = useState();
+  const [message, setMessage] = useState("");
+  const [type, setType] = useState("");
 
   useEffect(() => {
     fetch(
-      `https://5000-erickleite-testegitpod-dgusp95n720.ws-us107.gitpod.io/projects/${id}`,
+      `https://5000-erickleite-testegitpod-wno80m3ji91.ws-us107.gitpod.io/projects/${id}`,
       {
         method: "GET",
         headers: {
@@ -30,7 +32,10 @@ function Project() {
       }
     )
       .then((resp) => resp.json())
-      .then((data) => setProject(data))
+      .then((data) => {
+        setProject(data);
+        setServices(data.services);
+      })
       .catch((error) => console.log(error));
   }, [id]);
 
@@ -73,8 +78,9 @@ function Project() {
   useEffect(() => {
     setTimeout(() => {
       setMessage("");
+      setType("");
     }, 3000);
-  }, [message]);
+  }, [message, type]);
 
   const createService = (project) => {
     const lastService = project.services[project.services.length - 1];
@@ -92,9 +98,10 @@ function Project() {
     }
 
     project.cost = newCost;
+    console.log(project);
 
     fetch(
-      `https://5000-erickleite-testegitpod-dgusp95n720.ws-us107.gitpod.io/projects/${project.id}`,
+      `https://5000-erickleite-testegitpod-wno80m3ji91.ws-us107.gitpod.io/${project.id}`,
       {
         method: "PATCH",
         headers: {
@@ -104,7 +111,37 @@ function Project() {
       }
     )
       .then((resp) => resp.json())
-      .then((data) => console.log(data))
+      .then(() => setShowServiceForm(false))
+      .catch((error) => console.log(error));
+  };
+
+  const removeService = (id, cost) => {
+    const updateServices = project.services.filter(
+      (service) => service.id !== id
+    );
+
+    const updateProject = project;
+
+    updateProject.services = updateServices;
+    updateProject.cost = parseFloat(updateProject.cost) - parseFloat(cost);
+
+    fetch(
+      `https://5000-erickleite-testegitpod-wno80m3ji91.ws-us107.gitpod.io/projects/${updateProject.id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updateProject),
+      }
+    )
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProject(updateProject);
+        setServices(updateServices);
+        setMessage(" Projeto removido com sucesso");
+        setType("success");
+      })
       .catch((error) => console.log(error));
   };
 
@@ -148,7 +185,7 @@ function Project() {
               <div className={styles.space_between}>
                 <h2>Adicione um serviço:</h2>
                 <button onClick={toggleServiceProject}>
-                  {!showServiceForm ? "Adicionar serviço" : "Fechar"}
+                  {!showServiceForm ? "Criar serviço" : "Fechar"}
                 </button>
               </div>
               {showServiceForm && (
@@ -161,7 +198,18 @@ function Project() {
             </div>
             <div className={styles.service_container}>
               <h2>Serviços:</h2>
-              <p>Item de serviço</p>
+              {services.length > 0 &&
+                services.map((service) => (
+                  <ServiceCard
+                    id={service.id}
+                    name={service.name}
+                    cost={service.cost}
+                    description={service.description}
+                    key={service.id}
+                    handleRemove={removeService}
+                  />
+                ))}
+              {services.length === 0 && <p>Não há serviços cadastrados.</p>}
             </div>
           </>
         ) : (

@@ -29,7 +29,7 @@ function Projects() {
 
   const removeProject = (id) => {
     fetch(
-      `https://5000-erickleite-testegitpod-dgusp95n720.ws-us107.gitpod.io/projects/${id}`,
+      `https://5000-erickleite-testegitpod-wno80m3ji91.ws-us107.gitpod.io/projects/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -47,7 +47,7 @@ function Projects() {
 
   useEffect(() => {
     fetch(
-      "https://5000-erickleite-testegitpod-dgusp95n720.ws-us107.gitpod.io/projects",
+      "https://5000-erickleite-testegitpod-wno80m3ji91.ws-us107.gitpod.io/projects",
       {
         method: "GET",
         headers: {
